@@ -1,7 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  
+    --color-home-card-light: oklch(0.78 0.07 135);
+    --color-home-card-dark: oklch(0.40 0.07 135);
+
+    --color-log-card-light: oklch(0.72 0.09 150);
+    --color-log-card-dark: oklch(0.35 0.08 150);
+
+    --color-community-card-light: oklch(0.64 0.10 165);
+    --color-community-card-dark: oklch(0.30 0.09 165);
+
+    --color-group-card-light: oklch(0.56 0.11 178);
+    --color-group-card-dark: oklch(0.26 0.09 178);
+
+    --color-text-light: oklch(0.18 0.01 255);
+    --color-text-dark: oklch(0.96 0.00 0);
+
+    --color-progress-bar-light: oklch(0.72 0.12 147);
+    --color-progress-bar-dark: oklch(0.58 0.11 147);
+
+    --color-background-light: oklch(0.95 0.01 147);
+    --color-background-dark: oklch(0.20 0.01 250);
+
+    --color-secondary-background-light: oklch(0.86 0.02 147);
+    --color-secondary-background-dark: oklch(0.28 0.02 200);
 }
 
 @custom-variant dark (&:is(.dark, .dark *));
