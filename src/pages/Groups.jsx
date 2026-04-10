@@ -51,7 +51,7 @@ const groupsData = [
 ];
 
 function GroupDetail({ group, onBack }) {
-    const [tab, setTab] = useState("    Discoveries");
+    const [tab, setTab] = useState("Discoveries");
 
     return (
         <div className="mx-auto min-h-screen flex flex-col max-w-100 bg-background-light text-text-dark dark:bg-background-dark dark:text-text-light">
