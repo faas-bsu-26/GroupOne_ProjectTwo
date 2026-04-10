@@ -26,7 +26,6 @@ export default function MenuDropdown() {
         { label: "Community", action: () => navigate("/community") },
         { label: "Groups", action: () => navigate("/groups") },
         { label: "Log", action: () => navigate("/log") },
-        { label: "Scan", action: () => navigate("/scan") },
     ];
 
     // Theme toggle logic
