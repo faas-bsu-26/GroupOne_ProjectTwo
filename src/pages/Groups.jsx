@@ -6,7 +6,7 @@ import DiscoveryRow from "../components/DiscoveryRow";
 import LeaderboardRow from "../components/LeaderboardRow";
 import GoalRow from "../components/GoalRow";
 
-const GROUP_TABS = ["Group Discoveries", "Group Leaderboard", "Weekly Goals"];
+const GROUP_TABS = ["Discoveries", "Leaderboard", "Weekly Goals"];
 
 const groupsData = [
     {
@@ -51,7 +51,7 @@ const groupsData = [
 ];
 
 function GroupDetail({ group, onBack }) {
-    const [tab, setTab] = useState("Group Discoveries");
+    const [tab, setTab] = useState("    Discoveries");
 
     return (
         <div className="mx-auto min-h-screen flex flex-col max-w-100 bg-background-light text-text-dark dark:bg-background-dark dark:text-text-light">
@@ -70,10 +70,10 @@ function GroupDetail({ group, onBack }) {
             <NavButtons tabs={GROUP_TABS} active={tab} onSelect={setTab} />
 
             <div className="flex flex-col gap-3 px-3 pb-6">
-                {tab === "Group Discoveries" && group.discoveries.map((d, i) => (
+                {tab === "Discoveries" && group.discoveries.map((d, i) => (
                     <DiscoveryRow key={i} {...d} />
                 ))}
-                {tab === "Group Leaderboard" && group.leaderboard.map((l) => (
+                {tab === "Leaderboard" && group.leaderboard.map((l) => (
                     <LeaderboardRow key={l.rank} {...l} />
                 ))}
                 {tab === "Weekly Goals" && group.goals.map((g, i) => (
