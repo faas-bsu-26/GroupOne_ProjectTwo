@@ -19,7 +19,21 @@ export default function Activities() {
 
                 <ActivityRow
                 name="Nature Walk"
-                date="April 22, 2026. 2 - 3 pm"
+                date="April 24, 2026. 2 - 3 pm"
+                info="A walk through nature."
+                image="NatureWalk.jpg"
+                />
+
+                <ActivityRow
+                name="Nature Walk"
+                date="April 30, 2026. 5 - 6 pm"
+                info="A walk through nature."
+                image="NatureWalk.jpg"
+                />
+
+                <ActivityRow
+                name="Nature Walk"
+                date="May 5, 2026. 5 - 6 pm"
                 info="A walk through nature."
                 image="NatureWalk.jpg"
                 />
