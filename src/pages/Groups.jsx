@@ -50,23 +50,12 @@ const groupsData = [
     },
 ];
 
-function GroupDetail({ group, onBack }) {
+function GroupDetail({ group }) {
     const [tab, setTab] = useState("Discoveries");
 
     return (
         <div className="mx-auto min-h-screen flex flex-col max-w-100 bg-background-light text-text-dark dark:bg-background-dark dark:text-text-light">
-
-            <div className="flex items-center justify-between p-2 border-b border-text-light dark:border-text-dark">
-                <button
-                    onClick={onBack}
-                    className="text-sm font-medium px-3 py-1.5 rounded-full border border-text-light dark:border-text-dark text-text-light dark:text-text-dark hover:bg-secondary-background-light dark:hover:bg-secondary-background-dark transition-colors cursor-pointer"
-                >
-                    ← Groups
-                </button>
-                <h1 className="text-2xl font-bold text-text-light dark:text-text-dark">{group.name}</h1>
-                <span className="text-sm text-text-light dark:text-text-dark opacity-50 w-16 text-right">{group.members} members</span>
-            </div>
-
+            <Title title={group.name} />
             <NavButtons tabs={GROUP_TABS} active={tab} onSelect={setTab} />
 
             <div className="flex flex-col gap-3 px-3 pb-6">
@@ -88,7 +77,7 @@ export default function Groups() {
     const [selectedGroup, setSelectedGroup] = useState(null);
 
     if (selectedGroup) {
-        return <GroupDetail group={selectedGroup} onBack={() => setSelectedGroup(null)} />;
+        return <GroupDetail group={selectedGroup} />;
     }
 
     return (
