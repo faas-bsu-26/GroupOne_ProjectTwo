@@ -58,11 +58,11 @@ export default function Scan() {
         <div className="mx-auto min-h-screen flex flex-col max-w-100 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
             <Title title="Scan" />
       
-            <div className="flex-1 bg-primary-bg">
+            <div className="bg-primary-bg">
                 <ScanCamera image={"/plant.jpg"} />
             </div>
       
-            <div className="bg-primary-bg pb-4 flex justify-center">
+            <div className="bg-primary-bg pt-1 pb-4 flex justify-center">
                 <button onClick={() => setScanned(true)} className="relative w-24 h-24 flex items-center justify-center active:scale-95 transition-transform group cursor-pointer">
                     <div className="absolute w-20 h-20 rounded-full bg-white border border-black"></div>
                     <div className="absolute w-16 h-16 rounded-full bg-white group-hover:bg-neutral-300 group-active:bg-neutral-300 border border-black transition-colors"></div>

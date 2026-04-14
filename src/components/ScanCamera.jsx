@@ -1,7 +1,10 @@
 export default function ScanCamera({ image }) {
   return (
-    <div className="relative w-full h-full flex items-center justify-center p-8">
-      <div className="relative w-full max-w-md aspect-2/3 bg-black rounded-lg">
+    <div className="relative w-full h-full flex flex-col items-center justify-start gap-3 px-6 pb-8 pt-3">
+      <div className="rounded-full bg-black/60 px-4 py-2 text-sm font-medium text-white pointer-events-none">
+        Take picture to scan
+      </div>
+      <div className="relative w-full max-w-sm aspect-3/4 bg-black rounded-lg">
         {image && (
           <img 
             src={image} 
