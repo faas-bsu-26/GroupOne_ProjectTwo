@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PencilSquareIcon, PlusIcon } from "@heroicons/react/24/outline";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import Title from "../components/Title";
 import NavButtons from "../components/NavButtons";
 import DiscoveryRow from "../components/DiscoveryRow";
@@ -50,6 +51,15 @@ const groupsData = [
     },
 ];
 
+function decodeGroupParam(value) {
+    if (!value) return "";
+    try {
+        return decodeURIComponent(value);
+    } catch {
+        return "";
+    }
+}
+
 function GroupDetail({ group }) {
     const [tab, setTab] = useState("Discoveries");
 
@@ -74,7 +84,11 @@ function GroupDetail({ group }) {
 }
 
 export default function Groups() {
-    const [selectedGroup, setSelectedGroup] = useState(null);
+    const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const groupParam = searchParams.get("group");
+    const selectedGroupName = decodeGroupParam(groupParam);
+    const selectedGroup = groupsData.find((group) => group.name === selectedGroupName) || null;
 
     if (selectedGroup) {
         return <GroupDetail group={selectedGroup} />;
@@ -88,7 +102,7 @@ export default function Groups() {
                 {groupsData.map((group) => (
                     <button
                         key={group.id}
-                        onClick={() => setSelectedGroup(group)}
+                        onClick={() => navigate(`/groups?group=${encodeURIComponent(group.name)}`)}
                         className="bg-home-card-light dark:bg-home-card-dark rounded-xl px-5 py-4 flex items-center justify-between hover:brightness-95 dark:hover:brightness-110 transition-all cursor-pointer text-left"
                     >
                         <div>
