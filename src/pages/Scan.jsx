@@ -5,10 +5,19 @@ import ScanCamera from "../components/ScanCamera";
 
 export default function Scan() {
     const [scanned, setScanned] = useState(false);
-    const [type, setType] = useState("plant");
+    const [type, setType] = useState("");
     const [inputValue, setInputValue] = useState("");
+    const [error, setError] = useState(null);
     const naviagte = useNavigate();
 
+    const handleClick = () => {
+        if (!type || !inputValue) {
+            setError("Please select a type and enter a description.");
+            return;
+        }
+        naviagte('/log');
+    }
+    
     useEffect(() => {
         setScanned(false);
     }, []);
@@ -28,8 +37,11 @@ export default function Scan() {
                             <select
                                 className="border-2 border-gray-300 px-4 py-1 rounded-full shadow-sm focus:outline-none focus:ring-2 transition-all w-36 text-center text-sm bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark cursor-pointer"
                                 value={type}
-                                onChange={e => setType(e.target.value)}
+                                onChange={e => {
+                                    setType(e.target.value);
+                                }}
                             >
+                                {type === "" && <option value="" disabled>Type</option>}
                                 <option value="plant">Plant</option>
                                 <option value="animal">Animal</option>
                             </select>
@@ -43,10 +55,14 @@ export default function Scan() {
                             <button
                                 className="mt-2 w-64 py-2 rounded-full font-semibold shadow hover:opacity-90 transition-colors text-sm bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark cursor-pointer"
                                 type="button"
-                                onClick={() => naviagte('/log')}
+                                onClick={handleClick}
                             >
                                 Log
                             </button>
+
+                            <p className={`text-xs w-64 text-center min-h-4 ${error ? "text-red-500" : "invisible"}`}>
+                                {error || "placeholder"}
+                            </p>
                         </div>
                     </div>
                 </div>
