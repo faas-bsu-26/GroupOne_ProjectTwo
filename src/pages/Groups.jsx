@@ -36,7 +36,7 @@ const groupsData = [
         name: "Group 2",
         members: 3,
         discoveries: [
-            { name: "Morgan", action: "Found an animal", date: "Apr 8, 2026 · 8:30am", info: "Great blue heron at the pond", likes: 4, comments: 3, initials: "M" },
+            { name: "Morgan", action: "Found an animal", date: "Apr 8, 2026 · 8:30am", info: "Great blue heron at the pond", likes: 4, comments: 3, initials: "M", image: "/animal.jpg" },
         ],
         leaderboard: [
             { rank: 1, name: "Morgan", count: 11, initials: "M" },
