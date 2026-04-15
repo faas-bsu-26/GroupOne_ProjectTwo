@@ -35,7 +35,7 @@ export default function ActivityRow({ name, date, info, image, location, organiz
 
                     {meetingPoint && (
                         <div className="flex items-start gap-2 text-xs text-text-light dark:text-text-dark">
-                            <MapPinIcon className="w-4 h-4 flex-shrink-0 opacity-70 mt-0.5" />
+                            <MapPinIcon className="w-4 h-4 shrink-0 opacity-70 mt-0.5" />
                             <div>
                                 <span className="font-semibold">Meeting Point: </span>
                                 <span className="opacity-80">{meetingPoint}</span>
@@ -45,7 +45,7 @@ export default function ActivityRow({ name, date, info, image, location, organiz
 
                     {organizer && (
                         <div className="flex items-start gap-2 text-xs text-text-light dark:text-text-dark">
-                            <UserIcon className="w-4 h-4 flex-shrink-0 opacity-70 mt-0.5" />
+                            <UserIcon className="w-4 h-4 shrink-0 opacity-70 mt-0.5" />
                             <div>
                                 <span className="font-semibold">Organizer: </span>
                                 <span className="opacity-80">{organizer}</span>
@@ -55,7 +55,7 @@ export default function ActivityRow({ name, date, info, image, location, organiz
 
                     {details && (
                         <div className="flex items-start gap-2 text-xs text-text-light dark:text-text-dark">
-                            <ClipboardDocumentListIcon className="w-4 h-4 flex-shrink-0 opacity-70 mt-0.5" />
+                            <ClipboardDocumentListIcon className="w-4 h-4 shrink-0 opacity-70 mt-0.5" />
                             <span className="opacity-80 leading-relaxed">{details}</span>
                         </div>
                     )}
@@ -68,7 +68,7 @@ export default function ActivityRow({ name, date, info, image, location, organiz
 
                     <button
                         onClick={e => e.stopPropagation()}
-                        className="mt-1 w-full py-1.5 rounded-full text-xs font-semibold bg-text-light dark:bg-text-dark text-background-light dark:text-background-dark hover:opacity-80 transition-opacity"
+                        className="mt-1 w-full py-1.5 rounded-full text-xs font-semibold bg-text-light dark:bg-text-dark text-background-light dark:text-background-dark hover:opacity-80 transition-opacity cursor-pointer"
                     >
                         RSVP
                     </button>
