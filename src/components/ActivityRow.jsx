@@ -12,8 +12,8 @@ export default function ActivityRow({ name, date, info, image, location, organiz
             <div className="flex items-center justify-between">
                 <span className="font-semibold text-text-light dark:text-text-dark text-sm">{name}</span>
                 {expanded
-                    ? <ChevronUpIcon className="w-4 h-4 text-text-light dark:text-text-dark opacity-60 flex-shrink-0" />
-                    : <ChevronDownIcon className="w-4 h-4 text-text-light dark:text-text-dark opacity-60 flex-shrink-0" />
+                    ? <ChevronUpIcon className="w-4 h-4 text-text-light dark:text-text-dark opacity-60 shrink-0" />
+                    : <ChevronDownIcon className="w-4 h-4 text-text-light dark:text-text-dark opacity-60 shrink-0" />
                 }
             </div>
 
@@ -22,7 +22,7 @@ export default function ActivityRow({ name, date, info, image, location, organiz
                     <div>{date}</div>
                     <div>{info}</div>
                 </div>
-                <div className="w-20 h-20 rounded-lg bg-secondary-background-light dark:bg-secondary-background-dark flex-shrink-0 overflow-hidden">
+                <div className="w-20 h-20 rounded-lg bg-secondary-background-light dark:bg-secondary-background-dark shrink-0 overflow-hidden">
                     {image
                         ? <img src={image} alt="activity" className="w-full h-full object-cover" />
                         : <div className="w-full h-full" />
@@ -30,7 +30,9 @@ export default function ActivityRow({ name, date, info, image, location, organiz
                 </div>
             </div>
 
-            {expanded && (
+            <div
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${expanded ? "max-h-80 opacity-100 mt-1" : "max-h-0 opacity-0"}`}
+            >
                 <div className="flex flex-col gap-2 pt-2 border-t border-text-light dark:border-text-dark border-opacity-20">
 
                     {meetingPoint && (
@@ -73,7 +75,7 @@ export default function ActivityRow({ name, date, info, image, location, organiz
                         RSVP
                     </button>
                 </div>
-            )}
+            </div>
         </div>
     );
 }
