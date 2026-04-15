@@ -28,7 +28,6 @@ export default function MenuDropdown() {
         { label: "Log", action: () => navigate("/log") },
     ];
 
-    // Theme toggle logic
     const [isDark, setIsDark] = useState(() => {
         if (typeof window !== 'undefined') {
             return document.documentElement.classList.contains('dark');
@@ -51,30 +50,30 @@ export default function MenuDropdown() {
                 title="Open menu"
                 className="group cursor-pointer"
             >
-                <Bars3Icon className="h-8 w-8 text-text-light dark:text-text-dark group-hover:text-text-hover-light group-hover:dark:text-text-hover-dark transition-colors"/>
+                <Bars3Icon className={`h-8 w-8 text-text-light dark:text-text-dark group-hover:text-text-hover-light group-hover:dark:text-text-hover-dark transition-all duration-300 ${isOpen ? "rotate-90" : "rotate-0"}`} />
             </button>
-            {isOpen && (
-                <div className="absolute right-0 top-full mt-2 w-40 bg-secondary-background-light dark:bg-secondary-background-dark border border-gray-200 dark:border-gray-700 rounded shadow-lg z-50">
-                    {menuItems.map((item) => (
-                        <button
-                            key={item.label}
-                            onClick={() => {
-                                setIsOpen(false);
-                                item.action();
-                            }}
-                            className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-text-light dark:text-text-dark cursor-pointer transition-colors"
-                        >
-                            {item.label}
-                        </button>
-                    ))}
+            <div
+                className={`absolute right-0 top-full mt-2 w-40 bg-secondary-background-light dark:bg-secondary-background-dark border border-gray-200 dark:border-gray-700 rounded shadow-lg z-50 origin-top-right transition-all duration-200 ease-out ${isOpen ? "opacity-100 translate-y-0 scale-100 visible pointer-events-auto" : "opacity-0 -translate-y-2 scale-95 invisible pointer-events-none"}`}
+            >
+                {menuItems.map((item) => (
                     <button
-                        onClick={toggleTheme}
-                        className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-text-light dark:text-text-dark cursor-pointer transition-colors border-t border-text-dark dark:border-text-light"
+                        key={item.label}
+                        onClick={() => {
+                            setIsOpen(false);
+                            item.action();
+                        }}
+                        className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-text-light dark:text-text-dark cursor-pointer transition-colors"
                     >
-                        {isDark ? 'Light Mode' : 'Dark Mode'}
+                        {item.label}
                     </button>
-                </div>
-            )}
+                ))}
+                <button
+                    onClick={toggleTheme}
+                    className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-text-light dark:text-text-dark cursor-pointer transition-colors border-t border-text-dark dark:border-text-light"
+                >
+                    {isDark ? 'Light Mode' : 'Dark Mode'}
+                </button>
+            </div>
         </div>
     );
 }
