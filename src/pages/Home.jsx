@@ -13,7 +13,7 @@ export default function Home() {
 
                 <HomeCard
                     name="About"
-                    info="Text"
+                    info="Log your finds, discover your community, and find fun activities today!"
                 />
 
                 <HomeCard
