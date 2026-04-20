@@ -1,7 +1,7 @@
 {
   "name": "project",
   "private": true,
-  "homepage": "http://faas-bsu-26.github.io/GroupOne_ProjectTwo/",
+  "homepage": "http://faas-bsu-26.github.io/GroupOne_ProjectTwo",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
