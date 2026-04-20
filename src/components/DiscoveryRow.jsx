@@ -21,7 +21,7 @@ export default function DiscoveryRow({ name, action, date, info, likes, comments
                     <div>{info}</div>
                 </div>
                
-                <div className="w-20 h-20 rounded-lg bg-secondary-background-light dark:bg-secondary-background-dark flex-shrink-0 overflow-hidden">
+                <div className="w-20 h-20 rounded-lg bg-secondary-background-light dark:bg-secondary-background-dark shrink-0 overflow-hidden">
                     {image
                         ? <img src={image} alt="discovery" className="w-full h-full object-cover" />
                         : <div className="w-full h-full" />

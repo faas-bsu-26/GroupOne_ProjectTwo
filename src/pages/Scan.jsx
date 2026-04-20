@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import Title from "../components/Title";
 import ScanCamera from "../components/ScanCamera";
 
+const PLANT_IMAGE = `${import.meta.env.BASE_URL}plant.jpg`;
+
 export default function Scan() {
     const [scanned, setScanned] = useState(false);
     const [type, setType] = useState("");
@@ -50,7 +52,7 @@ export default function Scan() {
                         <>
                             <div className="flex justify-center items-center">
                                 <div className="w-55 h-55 rounded-lg shrink-0 overflow-hidden flex justify-center items-center bg-secondary-background-light dark:bg-secondary-background-dark">
-                                    <img src={"./plant.jpg"} alt="scanned image" className="w-full h-full object-cover" />
+                                    <img src={PLANT_IMAGE} alt="scanned image" className="w-full h-full object-cover" />
                                 </div>
                             </div>
                             <div className="flex justify-center mt-4">
@@ -96,7 +98,7 @@ export default function Scan() {
             <Title title="Scan" />
       
             <div className="bg-primary-bg">
-                <ScanCamera image={"/plant.jpg"} />
+                <ScanCamera image={PLANT_IMAGE} />
             </div>
       
             <div className="bg-primary-bg pt-1 pb-4 flex justify-center">

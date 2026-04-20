@@ -8,6 +8,8 @@ import LeaderboardRow from "../components/LeaderboardRow";
 import GoalRow from "../components/GoalRow";
 
 const GROUP_TABS = ["Discoveries", "Leaderboard", "Weekly Goals"];
+const PLANT_IMAGE = `${import.meta.env.BASE_URL}plant.jpg`;
+const ANIMAL_IMAGE = `${import.meta.env.BASE_URL}animal.jpg`;
 
 const groupsData = [
     {
@@ -15,9 +17,9 @@ const groupsData = [
         name: "Group 1",
         members: 4,
         discoveries: [
-            { name: "Alex", action: "Found a plant", date: "Apr 8, 2026 · 10:24am", info: "text", likes: 1, comments: 2, initials: "A", image: "plant.jpg" },
-            { name: "Jordan", action: "Found a plant", date: "Apr 7, 2026 · 2:10pm", info: "Text", likes: 2, comments: 1, initials: "J", image: "plant.jpg" },
-            { name: "Sam", action: "Found a plant", date: "Apr 7, 2026 · 9:05am", info: "Text", likes: 0, comments: 0, initials: "S", image: "plant.jpg" },
+            { name: "Alex", action: "Found a plant", date: "Apr 8, 2026 · 10:24am", info: "text", likes: 1, comments: 2, initials: "A", image: PLANT_IMAGE },
+            { name: "Jordan", action: "Found a plant", date: "Apr 7, 2026 · 2:10pm", info: "Text", likes: 2, comments: 1, initials: "J", image: PLANT_IMAGE },
+            { name: "Sam", action: "Found a plant", date: "Apr 7, 2026 · 9:05am", info: "Text", likes: 0, comments: 0, initials: "S", image: PLANT_IMAGE },
         ],
         leaderboard: [
             { rank: 1, name: "Alex", count: 14, initials: "A" },
@@ -36,7 +38,7 @@ const groupsData = [
         name: "Group 2",
         members: 3,
         discoveries: [
-            { name: "Morgan", action: "Found an animal", date: "Apr 8, 2026 · 8:30am", info: "Great blue heron at the pond", likes: 4, comments: 3, initials: "M", image: "animal.jpg" },
+            { name: "Morgan", action: "Found an animal", date: "Apr 8, 2026 · 8:30am", info: "Great blue heron at the pond", likes: 4, comments: 3, initials: "M", image: ANIMAL_IMAGE },
         ],
         leaderboard: [
             { rank: 1, name: "Morgan", count: 11, initials: "M" },

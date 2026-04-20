@@ -6,11 +6,12 @@ import LeaderboardRow from "../components/LeaderboardRow";
 import GoalRow from "../components/GoalRow";
 
 const TABS = ["Discoveries", "Leaderboard", "Weekly Goals"];
+const PLANT_IMAGE = `${import.meta.env.BASE_URL}plant.jpg`;
 
 const discoveries = [
-    { name: "Alex", action: "Found a plant", date: "Apr 8, 2026 · 10:24am", info: "Text", likes: 5, comments: 5, initials: "A", image: "plant.jpg" },
-    { name: "Jordan", action: "Found a plant", date: "Apr 8, 2026 · 9:10am", info: "Text", likes: 5, comments: 5, initials: "J", image: "plant.jpg" },
-    { name: "Sam", action: "Found a plant", date: "Apr 7, 2026 · 3:45pm", info: "Text", likes: 3, comments: 2, initials: "S", image: "plant.jpg" },
+    { name: "Alex", action: "Found a plant", date: "Apr 8, 2026 · 10:24am", info: "Text", likes: 5, comments: 5, initials: "A", image: PLANT_IMAGE },
+    { name: "Jordan", action: "Found a plant", date: "Apr 8, 2026 · 9:10am", info: "Text", likes: 5, comments: 5, initials: "J", image: PLANT_IMAGE },
+    { name: "Sam", action: "Found a plant", date: "Apr 7, 2026 · 3:45pm", info: "Text", likes: 3, comments: 2, initials: "S", image: PLANT_IMAGE },
 ];
 
 const leaderboard = [
