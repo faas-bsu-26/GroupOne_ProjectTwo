@@ -8,9 +8,9 @@ import GoalRow from "../components/GoalRow";
 const TABS = ["Discoveries", "Leaderboard", "Weekly Goals"];
 
 const discoveries = [
-    { name: "Alex", action: "Found a plant", date: "Apr 8, 2026 · 10:24am", info: "Text", likes: 5, comments: 5, initials: "A", image: "/plant.jpg" },
-    { name: "Jordan", action: "Found a plant", date: "Apr 8, 2026 · 9:10am", info: "Text", likes: 5, comments: 5, initials: "J", image: "/plant.jpg" },
-    { name: "Sam", action: "Found a plant", date: "Apr 7, 2026 · 3:45pm", info: "Text", likes: 3, comments: 2, initials: "S", image: "/plant.jpg" },
+    { name: "Alex", action: "Found a plant", date: "Apr 8, 2026 · 10:24am", info: "Text", likes: 5, comments: 5, initials: "A", image: "plant.jpg" },
+    { name: "Jordan", action: "Found a plant", date: "Apr 8, 2026 · 9:10am", info: "Text", likes: 5, comments: 5, initials: "J", image: "plant.jpg" },
+    { name: "Sam", action: "Found a plant", date: "Apr 7, 2026 · 3:45pm", info: "Text", likes: 3, comments: 2, initials: "S", image: "plant.jpg" },
 ];
 
 const leaderboard = [

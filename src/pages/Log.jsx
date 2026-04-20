@@ -8,9 +8,9 @@ import { useNavigate } from "react-router-dom";
 const TABS = ["Discoveries", "Goals", "Scan"];
 
 const discoveries = [
-    { name: "Alex", action: "Found a plant", date: "Apr 8, 2026 · 10:24am", info: "Text", likes: 5, comments: 7, initials: "A", image: "/plant.jpg" },
-    { name: "Alex", action: "Found a plant", date: "Apr 9, 2026 · 10:25am", info: "Text", likes: 6, comments: 6, initials: "A", image: "/plant.jpg" },
-    { name: "Alex", action: "Found a plant", date: "Apr 10, 2026 · 10:26am", info: "Text", likes: 7, comments: 5, initials: "A", image: "/plant.jpg" },
+    { name: "Alex", action: "Found a plant", date: "Apr 8, 2026 · 10:24am", info: "Text", likes: 5, comments: 7, initials: "A", image: "plant.jpg" },
+    { name: "Alex", action: "Found a plant", date: "Apr 9, 2026 · 10:25am", info: "Text", likes: 6, comments: 6, initials: "A", image: "plant.jpg" },
+    { name: "Alex", action: "Found a plant", date: "Apr 10, 2026 · 10:26am", info: "Text", likes: 7, comments: 5, initials: "A", image: "plant.jpg" },
 
 ];
 
